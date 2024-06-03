@@ -13,7 +13,9 @@ async function router(){
         }
     };
     let endpoint = window.location.hash.replace("#", "");
+    console.log(endpoint)
     if(endpoint.length === 0){
+        console.log("home page")
         endpoint = "home"
     }
     if(!routes[endpoint] && window.location.hash.length > 0){
