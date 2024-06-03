@@ -1,10 +1,5 @@
 async function router(){
     const routes = {
-        "/": {
-            title: "home",
-            location: "/templates/index.html",
-            description: "This is the home"
-        },
         "about": {
             title: "about page",
             location: "/templates/about.html",
@@ -12,13 +7,11 @@ async function router(){
         }
     };
     let endpoint = window.location.hash.replace("#", "");
-    if(endpoint.length === 0){
-        endpoint = "/"
-    }
-    if(!routes[endpoint]){
-        return window.location.assign(
-            "https://developer.mozilla.org/en-US/",
-          );          
+    if(!routes[endpoint] && window.location.hash.length > 0){
+        // return window.location.assign(
+        //     "https://therealjqz.github.io/hash-router-test",
+        //   );          
+        return console.log("unknown hash endpoint")
     }
     const html = await fetch(routes[endpoint].location).then(data => data.text());
     document.querySelector("#content").innerHTML = html;
