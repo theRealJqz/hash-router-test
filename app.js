@@ -14,7 +14,7 @@ async function router(){
     };
     let endpoint = window.location.hash.replace("#", "");
     if(endpoint.length === 0){
-        endpoint = "/"
+        endpoint = "home"
     }
     if(!routes[endpoint] && window.location.hash.length > 0){
         return window.location.assign(
@@ -28,3 +28,4 @@ async function router(){
 };
 
 window.addEventListener("hashchange", router);
+router();
