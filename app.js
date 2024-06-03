@@ -1,17 +1,17 @@
 async function router(){
+    const rootName = "/hash-router-test"
     const routes = {
         "about": {
             title: "about page",
-            location: "/hash-router-test/templates/about.html",
+            location: rootName + "/templates/about.html",
             description: "This is the about"
         }
     };
     let endpoint = window.location.hash.replace("#", "");
     if(!routes[endpoint] && window.location.hash.length > 0){
-        // return window.location.assign(
-        //     "https://therealjqz.github.io/hash-router-test",
-        //   );          
-        return console.log("unknown hash endpoint")
+        return window.location.assign(
+            "https://therealjqz.github.io/hash-router-test/404"
+          );          
     }
     const html = await fetch(routes[endpoint].location).then(data => data.text());
     document.querySelector("#content").innerHTML = html;
@@ -20,4 +20,3 @@ async function router(){
 };
 
 window.addEventListener("hashchange", router);
-router();
