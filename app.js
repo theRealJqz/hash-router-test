@@ -2,7 +2,7 @@ async function router(){
     const routes = {
         "about": {
             title: "about page",
-            location: "/templates/about.html",
+            location: "/hash-router-test/templates/about.html",
             description: "This is the about"
         }
     };
