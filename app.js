@@ -1,7 +1,7 @@
 async function router(){
     const rootName = "/hash-router-test"
     const routes = {
-        "/": {
+        "home": {
             title: "home page",
             location: rootName + "/templates/home.html",
             description: "This is the home page"
