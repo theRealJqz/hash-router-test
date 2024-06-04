@@ -3,13 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Portfolio</title>
 </head>
 <body>
-    <h1 id="content"></h1>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#brokenLink">A broken link to 404</a>
+    <div id="bigWrapper">
+        <nav id="navTop">
+            <div class="navStart">
+                <a href="#home">Home</a>
+            </div>
+            <div class="navMain">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+            </div>
+           <div class="navEnd">
+                <a href="#contact">Contact</a>
+                <span class="theme">GG</span>
+                <a href="#brokenLink">404</a>
+           </div>
+                        
+        </nav>
+        <div id="contentWrapper">      
+            <div id="home" class="cardContainer">1</div>
+            <div id="about" class="cardContainer">2</div>
+            <div id="skills" class="cardContainer">3</div>
+            <div id="projects" class="cardContainer">4</div>
+            <div id="contact" class="cardContainer">5</div>
+            <div id="background"></div>
+        </div>
+    </div>
+
+    <!--finish top nav -->
+    <!--  -->
+    <!--  -->
+    <!-- background pattern generator -->
+    <!-- light dark theme -->
+    <!-- mobile -->
+
     <script src="app.js"></script>
 </body>
 </html>
